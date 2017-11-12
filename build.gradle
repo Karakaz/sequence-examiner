@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+version = '0.0.1'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Sequence Examiner',
+                   'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'org.apache.commons:commons-math3:3.5'
+    compile 'com.google.guava:guava:18.0'
+    compile 'org.ejml:all:0.27'
+    
+    testCompile 'junit:junit:4.12'
+}
